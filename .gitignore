@@ -1,4 +1,4 @@
-*.js
+dist
 !jest.config.js
 *.d.ts
 node_modules
