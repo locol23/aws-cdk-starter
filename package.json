@@ -6,7 +6,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "prepare": "$(git rev-parse --is-inside-work-tree) == \"true\" && git config --local core.hooksPath .githook",
+    "prepare": "if [ $(git rev-parse --is-inside-work-tree) == \"true\" ] ; then git config --local core.hooksPath .githook ; fi",
     "clean": "rimraf dist cdk.out",
     "build": "run-s clean type-check",
     "type-check": "tsc",
